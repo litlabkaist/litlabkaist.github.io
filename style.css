@@ -1,15 +1,21 @@
+:root {
+    --font-serif: 'Noto Serif', 'Noto Serif KR', serif;
+    --font-sans: 'Nunito', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-serif);
 }
 
 nav {
     position: fixed;
+    top: 0;
     width: 100%;
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,22 +34,27 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .hero {
-    height: 100vh;
-    background-color: #00bcd4;
+    height: 40vh;
+    background-color: #11455C;
+    position: relative;
+    overflow: hidden;
+    background-image: url('img/bg1.jpeg');
+    background-position: center;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
 
 .hero-content {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 10%;
     transform: translateY(-50%);
-    max-width: 600px;
+    max-width: 800px;
     color: white;
 }
 
@@ -91,5 +102,138 @@ nav {
 
     .welcome {
         padding: 3rem 5%;
+    }
+}
+
+/* CSS 추가 */
+.news {
+    color: #333;
+    padding: 5rem 10%;
+    background: white;
+}
+
+.news-title {
+    /* text-align: center; */
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.news-date {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.news-text {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.show-more {
+    text-align: center;
+    color: #00838f;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.people-container {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 20px;
+}
+
+.people-container h2 {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.people-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.person-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+}
+
+.person-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.person-info {
+    padding-top: 10px;
+}
+
+.person-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.person-info .degree {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.person-info .tags {
+    margin-bottom: 10px;
+}
+
+.person-info .tags span {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .person-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .person-card img {
+        max-width: 200px;
     }
 }
