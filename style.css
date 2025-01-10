@@ -38,13 +38,13 @@ nav {
 }
 
 .hero {
-    height: 40vh;
+    height: 50vh;
     background-color: #11455C;
     position: relative;
     overflow: hidden;
-    background-image: url('img/bg3_test.jpeg');
+    /* background-image: url('img/bg4_test.jpeg');
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     position: relative;
     overflow: hidden;
 }
