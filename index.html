@@ -33,7 +33,7 @@
         }
 
         .hero-text {
-            padding: 8rem 0 3rem 0; /* 상단 패딩을 늘려서 nav에 가려지지 않도록 수정 */
+            padding: 10rem 0 3rem 0;
             background-color: white;
         }
 
@@ -72,6 +72,15 @@
             .hero-text h1 {
                 font-size: 2rem;
             }
+            
+            .hero-content {
+                left: 5%;
+                max-width: 90%;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
         }
 
         .welcome {
@@ -92,15 +101,6 @@
         }
 
         @media (max-width: 768px) {
-            .hero-content {
-                left: 5%;
-                max-width: 90%;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
             .welcome {
                 padding: 3rem 5%;
             }
@@ -192,6 +192,105 @@
                 padding: 3rem 1rem;
             }
         }
+
+        .contact {
+            color: #333;
+            background: white;
+            margin-bottom: 5rem;
+        }
+
+        .contact-title {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .contact-emails {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-email {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .contact-email strong {
+            color: #11455C;
+        }
+
+        @media (max-width: 768px) {
+            .contact {
+                padding: 3rem 1rem;
+            }
+        }
+
+        .footer {
+            background-color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-container {
+            max-width: 768px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .address {
+            font-size: 0.6rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.6rem;
+        }
+
+        .footer-logos {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .footer-logo {
+            height: 24px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .address {
+                order: 1;
+            }
+            
+            .copyright {
+                order: 3;
+            }
+            
+            .footer-logos {
+                order: 2;
+            }
+
+            .footer-logo {
+                height: 20px;
+            }
+        }
     </style>
 <body>
     <nav>
@@ -221,7 +320,7 @@
         </section>
 
         <section class="news">
-            <h3 class="news-title">NEWS</h3>
+            <h3 class="news-title">News</h3>
             <div class="news-grid">
                 <div class="news-item">
                     <div class="image-wrapper">
@@ -242,7 +341,31 @@
             </div>
             <!-- <div class="show-more">Show More</div> -->
         </section>
+
+        <section class="contact">
+            <h3 class="contact-title">Contact</h3>
+            <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            <div class="contact-emails">
+                <p class="contact-email"><strong>Lab Mail:</strong> litlab.kaist@gmail.com</p>
+            </div>
+        </section>
     </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="address">
+                <p>KAIST. N4, Room 1411,</p>
+                <p>291 Daehak-ro, Yuseong-gu, Daejeon (34141)</p>
+                <p>Republic of Korea</p>
+            </div>
+            <div class="copyright">
+                <p>© 2024. LitLab. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logos">
+                <img src="img/logo.png" alt="Lab Logo" class="footer-logo">
+                <img src="img/logo_kaist.png" alt="GSDHCSS Logo" class="footer-logo">
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
