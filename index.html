@@ -11,18 +11,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <style>
-        .hero {
-            height: 50vh;
-            background-color: #11455C;
-            position: relative;
-            overflow: hidden;
-            /* background-image: url('img/bg4_test.jpeg');
-            background-position: center;
-            background-size: cover; */
-            position: relative;
-            overflow: hidden;
-        }
-
         .hero-content {
             position: absolute;
             top: 60%;
@@ -41,6 +29,48 @@
             font-size: 1.5rem;
             font-weight: normal;
             margin-bottom: 0.5rem;
+        }
+
+        .hero-text {
+            padding: 8rem 0 3rem 0; /* 상단 패딩을 늘려서 nav에 가려지지 않도록 수정 */
+            background-color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .hero-text h3 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 40vh;
+            background-image: url('img/bg_test.webp');
+            background-position: center;
+            background-size: cover;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                padding: 2rem 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
         }
 
         .welcome {
@@ -141,6 +171,22 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .home-container {
+            max-width: 768px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .welcome, .news {
+            padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .welcome, .news {
+                padding: 3rem 1rem;
+            }
+        }
     </style>
 <body>
     <nav>
@@ -153,67 +199,70 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
+    <section class="home-container">
+        <section class="hero-text">
             <h1>Literary Studies at KAIST Lab</h1>
-            <h3>Literature is a timeless window into the human experience.</h3>
-        </div>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+        </section>
     </section>
 
-    <section class="welcome">
-        <p><em>Literary Studies at KAIST Lab</em> is the research lab dedicated to exploring the intersection of literature and cutting-edge methodologies, including computational analysis and digital humanities. This innovative lab aims to bridge the rich traditions of literary inquiry with the advancements in data-driven research, fostering a multidisciplinary approach to understanding texts. Researchers at the lab analyze classic and contemporary works using tools such as natural language processing, machine learning, and Bayesian modeling, uncovering patterns and insights that traditional methods might overlook.</p>
-        <p>The lab also emphasizes the study of translation, focusing on how cultural, historical, and linguistic factors shape the interpretation of literary works. By examining diverse translations of classics like Jane Eyre or Kafka's writings, the team investigates shifts in meaning, style, and reader perception over time.</p>
-        <p>With its forward-looking approach, Literary Studies at KAIST Lab is redefining how we engage with literature, creating a vibrant space for innovation and scholarly collaboration.</p>
-    </section>
+    <div class="hero-image-container">
+        <section class="hero-image"></section>
+    </div>
 
-    <section class="news">
-        <h3 class="news-title">NEWS</h3>
-        <div class="news-grid">
-            <div class="news-item">
-                <img src="img/news1.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">LitLab Open!!</div>
-            </div>
-            <div class="news-item">
-                <img src="img/news1.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">LitLab Open!!</div>
-            </div>
-            <div class="news-item">
-                <img src="img/news1.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-            </div>
-            <div class="news-item">
-                <img src="img/news1.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-            </div>
-            <div class="news-item">
-                <img src="img/news1.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-            </div>
-            <div class="news-item">
-                <img src="img/news1.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-            </div>
-            <div class="news-item">
-                <img src="img/news1.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-            </div>
-            <div class="news-item">
-                <img src="img/news2.png" alt="news1">
-                <div class="news-date">SEP, 2024</div>
-                <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-            </div>
-            <!-- 나머지 뉴스 아이템들도 같은 구조로 추가 -->
-        </div>
-        <div class="show-more">Show More</div>
-    </section>
+    <section class="home-container">
+        <section class="welcome">
+            <p><em>Literary Studies at KAIST Lab</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.</p>
+        </section>
 
+        <section class="news">
+            <h3 class="news-title">NEWS</h3>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="img/news1.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">LitLab Open!!</div>
+                </div>
+                <div class="news-item">
+                    <img src="img/news1.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">LitLab Open!!</div>
+                </div>
+                <div class="news-item">
+                    <img src="img/news1.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                </div>
+                <div class="news-item">
+                    <img src="img/news1.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                </div>
+                <div class="news-item">
+                    <img src="img/news1.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                </div>
+                <div class="news-item">
+                    <img src="img/news1.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                </div>
+                <div class="news-item">
+                    <img src="img/news1.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                </div>
+                <div class="news-item">
+                    <img src="img/news2.png" alt="news1">
+                    <div class="news-date">SEP, 2024</div>
+                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                </div>
+                <!-- 나머지 뉴스 아이템들도 같은 구조로 추가 -->
+            </div>
+            <div class="show-more">Show More</div>
+        </section>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
