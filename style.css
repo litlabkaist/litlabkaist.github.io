@@ -49,8 +49,8 @@ a {
 
 /** Common Start **/
 :root {
-    /* --font-serif: 'Lora', serif; */
-    --font-serif: 'Noto Serif', serif;
+    --font-serif: 'Lora', serif;
+    /* --font-serif: 'Noto Serif', serif; */
 }
 
 * {
