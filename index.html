@@ -63,7 +63,7 @@
             background-position: center;
             background-size: cover;
         }
-
+ 
         @media (max-width: 768px) {
             .hero-text {
                 padding: 2rem 1rem;
@@ -108,12 +108,11 @@
 
         .news {
             color: #333;
-            padding: 5rem 10%;
+            padding: 5rem 5%;
             background: white;
         }
 
         .news-title {
-            /* text-align: center; */
             color: #333;
             font-size: 2rem;
             margin-bottom: 3rem;
@@ -184,7 +183,7 @@
         }
 
         .welcome, .news {
-            padding: 5rem 0;
+            padding: 3rem 0;
         }
 
         @media (max-width: 768px) {
@@ -269,6 +268,12 @@
         }
 
         @media (max-width: 768px) {
+            .footer-container {
+                padding: 0 1rem;  /* 이 줄을 추가 */
+            }
+        }
+
+        @media (max-width: 480px) {
             .footer-container {
                 flex-direction: column;
                 text-align: center;
