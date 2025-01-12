@@ -48,22 +48,23 @@
         height: 100%; /* 부모 높이만큼 차지 */
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* 컨텐츠를 위아래로 균등 분배 */
+        /* justify-content: space-between; */
+        justify-content: flex-start;
     }
 
     .people-container .person-info h3 {
         font-size: 1.3rem;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .people-container .person-info .degree {
         font-size: 0.9rem;
-        /* margin-bottom: 5px; */
+        margin-bottom: 10px;
     }
 
     .people-container .person-info .tags {
         font-size: 0.9rem;
-        margin-bottom: 1px;
+        margin-bottom: 10px;
     }
 
     .people-container .person-info .tags span {
@@ -154,8 +155,7 @@
                     <h3>Woori Jang
                         <a href="mailto:woori.jang@kaist.ac.kr" target="_blank">✉️</a>
                     </h3>
-                    <p class="degree">M.S., Digital Humanities & Computational Social Sciences</p>
-                    <p class="degree">B.A., Korean Literature</p>
+                    <p class="degree">M.S., Digital Humanities & Computational Social Sciences <br>B.A., Korean Literature</p>
                     <p class="tags">
                         <span>Digital Humanities, Literary Computation, Science Fiction, Technoculture Studies</span>
                     </p>
