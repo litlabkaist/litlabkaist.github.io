@@ -88,8 +88,26 @@ nav {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
+    /* .nav-links {
         display: none;
+    } */
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height:15px;
+    }
+
+    nav {
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
     }
 }
 
