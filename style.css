@@ -64,16 +64,17 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     background: rgba(255, 255, 255, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 연한 회색 테두리 추가 */
 }
 
 .logo {
-    height: 40px;
+    height:30px;
 }
 
 .nav-links {
@@ -82,8 +83,9 @@ nav {
 }
 
 .nav-links a {
-    color: #333;
+    color: #11455C;
     font-weight: 400;
+    font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
@@ -91,4 +93,3 @@ nav {
         display: none;
     }
 }
-/** Common End **/
