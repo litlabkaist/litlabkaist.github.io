@@ -120,7 +120,7 @@
 
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-bottom: 2rem;
         }
@@ -130,11 +130,21 @@
             flex-direction: column;
         }
 
-        .news-item img {
+        .news-item .image-wrapper {
+            position: relative;
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            padding-top: 75%;
             margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .news-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .news-date {
@@ -152,12 +162,6 @@
             color: #00838f;
             cursor: pointer;
             margin-top: 2rem;
-        }
-
-        @media (max-width: 1200px) {
-            .news-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
 
         @media (max-width: 768px) {
@@ -219,48 +223,44 @@
             <h3 class="news-title">NEWS</h3>
             <div class="news-grid">
                 <div class="news-item">
-                    <img src="img/news1.png" alt="news1">
+                    <div class="image-wrapper">
+                        <img src="img/news1.png" alt="news1">
+                    </div>
                     <div class="news-date">SEP, 2024</div>
                     <div class="news-text">LitLab Open!!</div>
                 </div>
                 <div class="news-item">
-                    <img src="img/news1.png" alt="news1">
+                    <div class="image-wrapper">
+                        <img src="img/news1.png" alt="news1">
+                    </div>
                     <div class="news-date">SEP, 2024</div>
                     <div class="news-text">LitLab Open!!</div>
                 </div>
                 <div class="news-item">
-                    <img src="img/news1.png" alt="news1">
+                    <div class="image-wrapper">
+                        <img src="img/news1.png" alt="news1">
+                    </div>
                     <div class="news-date">SEP, 2024</div>
-                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                    <div class="news-text">LitLab Open!!</div>
                 </div>
                 <div class="news-item">
-                    <img src="img/news1.png" alt="news1">
+                    <div class="image-wrapper">
+                        <img src="img/news1.png" alt="news1">
+                    </div>
                     <div class="news-date">SEP, 2024</div>
-                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
+                    <div class="news-text">LitLab Open!!</div>
                 </div>
+                
                 <div class="news-item">
-                    <img src="img/news1.png" alt="news1">
-                    <div class="news-date">SEP, 2024</div>
-                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-                </div>
-                <div class="news-item">
-                    <img src="img/news1.png" alt="news1">
-                    <div class="news-date">SEP, 2024</div>
-                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-                </div>
-                <div class="news-item">
-                    <img src="img/news1.png" alt="news1">
-                    <div class="news-date">SEP, 2024</div>
-                    <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
-                </div>
-                <div class="news-item">
-                    <img src="img/news2.png" alt="news1">
+                    <div class="image-wrapper">
+                        <img src="img/news2.png" alt="news1">
+                    </div>
                     <div class="news-date">SEP, 2024</div>
                     <div class="news-text">The Literary Studies lab at KAIST Lab is now open.</div>
                 </div>
                 <!-- 나머지 뉴스 아이템들도 같은 구조로 추가 -->
             </div>
-            <div class="show-more">Show More</div>
+            <!-- <div class="show-more">Show More</div> -->
         </section>
     </section>
     <script src="script.js"></script>
