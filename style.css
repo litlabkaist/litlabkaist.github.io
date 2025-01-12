@@ -90,15 +90,14 @@ nav {
     /* .nav-links {
         display: none;
     } */
+    nav {
+        padding: 0.8rem 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     .logo {
         height:15px;
-    }
-
-    nav {
-        padding: 0.8rem 1rem;
     }
 
     .nav-links {
