@@ -108,6 +108,38 @@
             width: 100%;
         }
     }
+
+    .people-container .person-card .image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .people-container .person-card .image-container::before {
+        content: attr(data-hover-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        color: #000;  /* 검은색 텍스트 */
+        display: block;
+        padding: 5px;
+        text-align: left;
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 1;
+        font-size: 0.75rem;
+        line-height: 1.3;
+        overflow: hidden;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        box-sizing: border-box;  /* padding을 너비에 포함시킴 */
+    }
+
+    .people-container .person-card .image-container:hover::before {
+        opacity: 1;
+    }
 </style>
 <body>
     <nav>
@@ -127,7 +159,7 @@
         <h2>Professor</h2>
         <div class="people-grid">
             <div class="person-card">
-                <div class="image-container">
+                <div class="image-container" data-hover-text="This image is a portrait of a woman set against an autumnal background, with vibrant red and orange foliage creating a warm and lively atmosphere. The woman has neatly styled, medium-length black hair and is smiling brightly at the camera. She is dressed in a white shirt paired with a black blazer, blue jeans, and a brown belt, presenting a clean and sophisticated look. Standing next to a tree in a relaxed and natural pose, she harmonizes beautifully with the colorful autumn leaves in the background. The photo captures the essence of autumn's charm and conveys a soft, warm emotion, blending nature and the subject seamlessly.">
                     <img src="img/seohyon.JPG" alt="Seohyeon Jung">
                 </div>
                 <div class="person-info">
@@ -148,7 +180,7 @@
         <h2>Doctoral Program</h2>
         <div class="people-grid">
             <div class="person-card">
-                <div class="image-container">
+                <div class="image-container" data-hover-text="This image features a portrait of a woman set against a vibrant autumnal backdrop, with vivid red, orange, and yellow foliage creating a warm and lively atmosphere. The soft bokeh effect highlights her medium-length curly black hair, which frames her face naturally. She wears a simple black V-neck sweater and a delicate gold necklace with a heart-shaped pendant, adding a touch of elegance. Her calm expression and neutral gaze convey quiet confidence, while the warm autumn tones contrast beautifully with her dark outfit, blending human emotion and natural beauty seamlessly.">
                     <img src="img/jiwoo.JPG" alt="Woori Jang">
                 </div>
                 <div class="person-info">
@@ -185,7 +217,7 @@
             </div>
 
             <div class="person-card">
-                <div class="image-container">
+                <div class="image-container" data-hover-text="This image is a portrait of a woman set against an autumnal backdrop, featuring trees with orange leaves and a blurred building in the background that creates a calm, seasonal atmosphere. The woman has short, neatly styled black hair and is dressed in a sophisticated outfit, wearing a black blazer over a gray turtleneck sweater, presenting a polished and professional look. She stands confidently with a composed expression and her hands positioned at her sides, giving off a poised and self-assured demeanor. The muted tones of her attire harmonize with the subtle autumn colors, blending elegance with the natural beauty of the setting.">
                     <img src="img/eunhoo.JPG" alt="Eunhoo Lee">
                 </div>
                 <div class="person-info">

@@ -57,6 +57,7 @@
     }
 
     .hero-image {
+        position: relative;
         width: 100%;
         height: 40vh;
         background-image: url('img/bg_test.webp');
@@ -272,6 +273,60 @@
             margin-bottom: 1.5rem;
         }
     }
+
+    .news-item .image-wrapper::before {
+        content: attr(data-hover-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        color: #000;
+        display: block;
+        padding: 0;
+        text-align: left;
+        opacity: 0;
+        /* transition: all 0.3s ease; */
+        z-index: 1;
+        font-size: 0.75rem;
+        line-height: 1.2;
+        overflow: hidden;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        box-sizing: border-box;
+    }
+
+    .news-item .image-wrapper:hover::before {
+        opacity: 1;
+    }
+
+    /* .hero-image::before {
+        content: attr(data-hover-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        color: #000;
+        display: block;
+        padding: 10px;
+        text-align: left;
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 1;
+        font-size: 1rem;
+        line-height: 1.6;
+        overflow: hidden;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        box-sizing: border-box;
+    }
+
+    .hero-image:hover::before {
+        opacity: 1;
+    } */
 </style>
 <body>
     <nav>
@@ -294,7 +349,9 @@
     </section>
 
     <div class="hero-image-container">
-        <section class="hero-image"></section>
+        <section class="hero-image" data-hover-text="Jane Austen 『Pride and Prejudice』 Jane Austen 『Sense and Sensibility』 Jane Austen 『Emma』 Charlotte Brontë 『Jane Eyre』 Emily Brontë 『Wuthering Heights』 Anne Brontë 『The Tenant of Wildfell Hall』 Charles Dickens 『Great Expectations』 Charles Dickens 『David Copperfield』 Charles Dickens 『Oliver Twist』 Charles Dickens 『Bleak House』 Charles Dickens 『A Tale of Two Cities』 Herman Melville 『Moby-Dick』 Herman Melville 『Billy Budd, Sailor』 Victor Hugo 『Les Misérables』 Victor Hugo 『The Hunchback of Notre-Dame』 Leo Tolstoy 『Anna Karenina』 Leo Tolstoy 『War and Peace』 Fyodor Dostoevsky 『Crime and Punishment』 Fyodor Dostoevsky 『The Brothers Karamazov』 Fyodor Dostoevsky 『Notes from Underground』 Mary Shelley 『Frankenstein』 James Joyce 『Ulysses』 James Joyce 『A Portrait of the Artist as a Young Man』 Franz Kafka 『The Metamorphosis』 Franz Kafka 『The Trial』 George Orwell 『1984』 George Orwell 『Animal Farm』 Aldous Huxley 『Brave New World』 Ernest Hemingway 『The Old Man and the Sea』 Ernest Hemingway 『A Farewell to Arms』 Ernest Hemingway 『For Whom the Bell Tolls』 F. Scott Fitzgerald 『The Great Gatsby』 F. Scott Fitzgerald 『Tender Is the Night』 John Steinbeck 『The Grapes of Wrath』 John Steinbeck 『Of Mice and Men』 John Steinbeck 『East of Eden』 J.D. Salinger 『The Catcher in the Rye』 Mark Twain 『The Adventures of Huckleberry Finn』 Mark Twain 『The Adventures of Tom Sawyer』 Harper Lee 『To Kill a Mockingbird』 Louisa May Alcott 『Little Women』 Miguel de Cervantes 『Don Quixote』 Alexandre Dumas 『The Count of Monte Cristo』 Alexandre Dumas 『The Three Musketeers』 Gustave Flaubert 『Madame Bovary』 Gustave Flaubert 『Sentimental Education』 Thomas Hardy 『Tess of the d’Urbervilles』 Thomas Hardy 『Far from the Madding Crowd』 Thomas Hardy 『Jude the Obscure』 Joseph Conrad 『Heart of Darkness』 Joseph Conrad 『Lord Jim』 Bram Stoker 『Dracula』 Robert Louis Stevenson 『Strange Case of Dr Jekyll and Mr Hyde』 Robert Louis Stevenson 『Treasure Island』 Nathaniel Hawthorne 『The Scarlet Letter』 Nathaniel Hawthorne 『The House of the Seven Gables』 Henry James 『The Turn of the Screw』 Henry James 『The Portrait of a Lady』 Edith Wharton 『The Age of Innocence』 Edith Wharton 『Ethan Frome』 Virginia Woolf 『Mrs. Dalloway』 Virginia Woolf 『To the Lighthouse』 Virginia Woolf 『Orlando』 Gabriel García Márquez 『One Hundred Years of Solitude』 Gabriel García Márquez 『Love in the Time of Cholera』 Marcel Proust 『In Search of Lost Time』 Emily Dickinson 『Collected Poems』 Dante Alighieri 『The Divine Comedy』 Geoffrey Chaucer 『The Canterbury Tales』 Homer 『The Iliad』 Homer 『The Odyssey』 Sophocles 『Oedipus Rex』 Sophocles 『Antigone』 William Shakespeare 『Hamlet』 William Shakespeare 『Macbeth』 William Shakespeare 『Romeo and Juliet』 William Shakespeare 『Othello』 William Shakespeare 『King Lear』 William Shakespeare 『A Midsummer Night's Dream』 William Faulkner 『The Sound and the Fury』 William Faulkner 『As I Lay Dying』 William Faulkner 『Light in August』 Jorge Luis Borges 『Ficciones』 Jorge Luis Borges 『The Aleph』 Albert Camus 『The Stranger』 Albert Camus 『The Plague』 Marcel Proust 『Swann’s Way』 E.M. Forster 『A Passage to India』 E.M. Forster 『Howards End』 D.H. Lawrence 『Sons and Lovers』 D.H. Lawrence 『Lady Chatterley’s Lover』 Kazuo Ishiguro 『The Remains of the Day』 Kazuo Ishiguro 『Never Let Me Go』 Emily Brontë 『Wuthering Heights』 Thomas Mann 『The Magic Mountain』 Thomas Mann 『Death in Venice』 Johann Wolfgang von Goethe 『Faust』 Stendhal 『The Red and the Black』 Stendhal 『The Charterhouse of Parma』 Voltaire 『Candide』 Jean-Jacques Rousseau 『Confessions』 Jonathan Swift 『Gulliver’s Travels』 Miguel de Unamuno 『Mist』 José Saramago 『Blindness』 Italo Calvino 『If on a Winter's Night a Traveler』 Luigi Pirandello 『One, No One and One Hundred Thousand』 Chinua Achebe 『Things Fall Apart』 Rabindranath Tagore 『Gitanjali』 Mahatma Gandhi 『The Story of My Experiments with Truth』 Khalil Gibran 『The Prophet』">
+
+        </section>
     </div>
 
     <section class="home-container">
@@ -306,7 +363,7 @@
             <h3 class="news-title">News</h3>
             <div class="news-grid">
                 <div class="news-item">
-                    <div class="image-wrapper">
+                    <div class="image-wrapper" data-hover-text="This image features a group of five individuals posing together in an outdoor setting, surrounded by a backdrop of vibrant yellow-green autumn foliage. The scene is framed by brick columns and low walls, providing a structured and balanced composition. Two individuals are seated on the brick bench, smiling warmly at the camera, while the other three stand behind them with composed and confident expressions. Their attire is predominantly dark and neutral, exuding a professional and elegant vibe, contrasting gently with the bright and natural colors of the background. The overall atmosphere is one of harmony, blending the individuals' poised presence with the serene and picturesque outdoor setting.">
                         <img src="img/news1.png" alt="news1">
                     </div>
                     <div class="news-date">SEP, 2024</div>
