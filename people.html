@@ -11,7 +11,7 @@
     <title>People</title>
     <style>
         .people-container {
-            max-width: 1200px;
+            max-width: 768px;
             margin: 120px auto 0;
             padding: 0 20px;
         }
@@ -30,8 +30,9 @@
 
         .people-container .person-card {
             display: grid;
-            grid-template-columns: 200px 1fr;
+            grid-template-columns: 1fr;
             gap: 30px;
+            align-items: start;
         }
 
         .people-container .person-card img {
@@ -41,36 +42,67 @@
         }
 
         .people-container .person-info {
-            padding-top: 10px;
+            padding-top: 0;
+            height: 100%; /* 부모 높이만큼 차지 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 컨텐츠를 위아래로 균등 분배 */
         }
 
         .people-container .person-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
         }
 
         .people-container .person-info .degree {
-            font-size: 1rem;
-            margin-bottom: 10px;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
         }
 
         .people-container .person-info .tags {
-            margin-bottom: 10px;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
         }
 
         .people-container .person-info .tags span {
             display: block;
             color: #666;
-            margin-bottom: 5px;
         }
 
-        @media (max-width: 600px) {
+        .people-container .person-info p {
+            font-size: 0.8rem;
+            line-height: 1.4; /* 본문 텍스트의 줄간격을 더 넓게 */
+        }
+
+        .people-container .person-card .image-container {
+            width: 100%;
+            position: relative;
+            padding-top: 177.78%; /* 9:16 비율 (9/16 = 0.5625, 0.5625 * 100 = 56.25%) */
+        }
+
+        .people-container .person-card .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center; /* 이미지 중앙 정렬 추가 */
+        }
+
+        @media (min-width: 769px) {
             .people-container .person-card {
-                grid-template-columns: 1fr;
+                grid-template-columns: 200px 1fr;
             }
             
-            .people-container .person-card img {
-                max-width: 200px;
+            .people-container .person-card .image-container {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .people-container .person-card .image-container {
+                width: 100%;
             }
         }
     </style>
@@ -91,17 +123,19 @@
         <h2>Professor</h2>
         <div class="people-grid">
             <div class="person-card">
-                <img src="img/seohyeon.png" alt="Seohyeon Jung">
+                <div class="image-container">
+                    <img src="img/seohyon.JPG" alt="Seohyeon Jung">
+                </div>
                 <div class="person-info">
                     <h3>Seohyon Jung
-                        <a href="https://scholar.google.com/citations?user=JEf03g0AAAAJ" target="_blank">🌐</a>
+                        <a href="https://scholar.google.com/citations?user=JEf03g0AAAAJ" target="_blank">🏠</a>
                     </h3>
                     <p class="degree">Assistant Professor, School of Digital Humanities and Computational Social Sciences</p>
                     <p class="tags">
                         <span>British Novel, Critical Theory, Digital Humanities</span>
                     </p>
                     <p class="tags">seohyon.jung@kaist.ac.kr</p>
-                    <p>Eunhoo Lee is a Master’s student at the School of Digital Humanities and Computational Social Sciences. She holds a Bachelor of Arts in English Literature and Linguistics from Kookmin University. Her thesis research analyzes how space in a closed-circle mystery by Agatha Christie is distorted by readers and how they perceive spatiality in a change of space to place during their reading. The thesis project focuses on spatial network analysis and its visualization in literary geography and narratology and is considered the possible approach to narrative criminology. Eunhoo has participated in several projects, writing the article “Feminism Reboot and the Evolution of Korean BL” as one of three authors and creating a database of classic books in the National Library of Korea.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus euismod, nisi non facilisis porttitor, lorem augue malesuada justo, et egestas urna sapien at odio. Curabitur eget risus lorem. Nullam dictum magna vel orci efficitur tristique. Aenean vestibulum, risus at efficitur varius, arcu felis vehicula turpis, at tincidunt arcu urna nec arcu. Proin tincidunt, lectus a vehicula molestie, urna arcu sodales nulla, eget tristique magna purus ac ligula. Morbi pellentesque erat id massa tincidunt, ut suscipit lacus varius. Aliquam vel nulla id elit convallis fermentum. Suspendisse potenti. Donec nec libero nec lorem lacinia auctor vel quis erat.</p>
                 </div>
             </div>
         </div>
@@ -110,7 +144,24 @@
         <h2>MS Students</h2>
         <div class="people-grid">
             <div class="person-card">
-                <img src="img/eunhoo.png" alt="Daniel Cha">
+                <div class="image-container">
+                    <img src="img/jiwoo.JPG" alt="Eunhoo Lee">
+                </div>
+                <div class="person-info">
+                    <h3>Jiwoo Choi</h3>
+                    <p class="degree">B.A., Data Science and English Language & Literature</p>
+                    <p class="tags">
+                        <span>Digital Humanities, English Literature, Gender Studies, Transformative Narratives</span>
+                    </p>
+                    <p class="tags">jwchoi0515@kaist.ac.kr</p>
+                    <p>As a master’s student in the School of Digital Humanities and Computational Social Sciences and a member of Litlab, Jiwoo’s research interests lie in English literature and its interpretation by diverse audiences. With a B.A. in Data Science and English Language & Literature, they aim to integrate digital methods into their study, using textual data to analyze narrative and cultural patterns. Additionally, they are particularly interested in examining literature through the lens of feminism and queer theory, exploring how these perspectives shape the reinterpretation of texts. One of their key research topics is the interaction between fanfiction, author, and society, specifically focusing on transgender fanfiction within the Harry Potter fandom.</p>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <div class="image-container">
+                    <img src="img/eunhoo.JPG" alt="Eunhoo Lee">
+                </div>
                 <div class="person-info">
                     <h3>Eunhoo Lee</h3>
                     <p class="degree">B.A., English Literature and Linguistics</p>
@@ -121,19 +172,54 @@
                     <p>Eunhoo Lee is a Master’s student at the School of Digital Humanities and Computational Social Sciences. She holds a Bachelor of Arts in English Literature and Linguistics from Kookmin University. Her thesis research analyzes how space in a closed-circle mystery by Agatha Christie is distorted by readers and how they perceive spatiality in a change of space to place during their reading. The thesis project focuses on spatial network analysis and its visualization in literary geography and narratology and is considered the possible approach to narrative criminology. Eunhoo has participated in several projects, writing the article “Feminism Reboot and the Evolution of Korean BL” as one of three authors and creating a database of classic books in the National Library of Korea.</p>
                 </div>
             </div>
+
             <div class="person-card">
-                <img src="img/donghoon.png" alt="Donghoon Jung">
+                <div class="image-container">
+                    <img src="img/eunhoo.JPG" alt="Eunhoo Lee">
+                </div>
                 <div class="person-info">
-                    <h3>Donghoon Jung</h3>
-                    <p class="degree">Bachelor of Engineering, Department of Computer Engineering</p>
+                    <h3>Eunhoo Lee</h3>
+                    <p class="degree">B.A., English Literature and Linguistics</p>
                     <p class="tags">
                         <span>Crime Fiction, Spatial Network Analysis, Literary Geography, Narratology, Narrative Criminology</span>
                     </p>
-                    <p class="tags">donghoon.jung@kaist.ac.kr</p>
+                    <p class="tags">hoong8013@kaist.ac.kr</p>
+                    <p>Eunhoo Lee is a Master’s student at the School of Digital Humanities and Computational Social Sciences. She holds a Bachelor of Arts in English Literature and Linguistics from Kookmin University. Her thesis research analyzes how space in a closed-circle mystery by Agatha Christie is distorted by readers and how they perceive spatiality in a change of space to place during their reading. The thesis project focuses on spatial network analysis and its visualization in literary geography and narratology and is considered the possible approach to narrative criminology. Eunhoo has participated in several projects, writing the article “Feminism Reboot and the Evolution of Korean BL” as one of three authors and creating a database of classic books in the National Library of Korea.</p>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <div class="image-container">
+                    <img src="img/eunhoo.JPG" alt="Eunhoo Lee">
+                </div>
+                <div class="person-info">
+                    <h3>Eunhoo Lee</h3>
+                    <p class="degree">B.A., English Literature and Linguistics</p>
+                    <p class="tags">
+                        <span>Crime Fiction, Spatial Network Analysis, Literary Geography, Narratology, Narrative Criminology</span>
+                    </p>
+                    <p class="tags">hoong8013@kaist.ac.kr</p>
                     <p>Eunhoo Lee is a Master’s student at the School of Digital Humanities and Computational Social Sciences. She holds a Bachelor of Arts in English Literature and Linguistics from Kookmin University. Her thesis research analyzes how space in a closed-circle mystery by Agatha Christie is distorted by readers and how they perceive spatiality in a change of space to place during their reading. The thesis project focuses on spatial network analysis and its visualization in literary geography and narratology and is considered the possible approach to narrative criminology. Eunhoo has participated in several projects, writing the article “Feminism Reboot and the Evolution of Korean BL” as one of three authors and creating a database of classic books in the National Library of Korea.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="address">
+                <p>KAIST. N4, Room 1411,</p>
+                <p>291 Daehak-ro, Yuseong-gu, Daejeon (34141)</p>
+                <p>Republic of Korea</p>
+            </div>
+            <div class="copyright">
+                <p>© 2024. LitLab. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logos">
+                <img src="img/logo.png" alt="Lab Logo" class="footer-logo">
+                <img src="img/logo_kaist.png" alt="GSDHCSS Logo" class="footer-logo">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
