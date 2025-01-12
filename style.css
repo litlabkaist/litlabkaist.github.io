@@ -49,7 +49,8 @@ a {
 
 /** Common Start **/
 :root {
-    --font-serif: 'Lora', serif; /* 폰트를 변수로 정의 */
+    /* --font-serif: 'Lora', serif; */
+    --font-serif: 'Noto Serif', serif;
 }
 
 * {
