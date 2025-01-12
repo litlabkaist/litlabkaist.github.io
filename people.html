@@ -9,107 +9,109 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>People</title>
-    <style>
-        .people-container {
-            max-width: 768px;
-            margin: 120px auto 0;
-            padding: 0 20px;
-        }
+</head>
+<style>
+    .people-container {
+        max-width: 768px;
+        margin: 120px auto 0;
+        padding: 0 20px;
+    }
 
-        .people-container h2 {
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+    .people-container h2 {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
 
-        .people-container .people-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
+    .people-container .people-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
 
+    .people-container .person-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    .people-container .person-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .people-container .person-info {
+        padding-top: 0;
+        height: 100%; /* 부모 높이만큼 차지 */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* 컨텐츠를 위아래로 균등 분배 */
+    }
+
+    .people-container .person-info h3 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    .people-container .person-info .degree {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .people-container .person-info .tags {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .people-container .person-info .tags span {
+        display: block;
+        color: #666;
+    }
+
+    .people-container .person-info p {
+        font-size: 0.8rem;
+        line-height: 1.4; /* 본문 텍스트의 줄간격을 더 넓게 */
+    }
+
+    .people-container .person-card .image-container {
+        width: 100%;
+        position: relative;
+        padding-top: 177.78%; /* 9:16 비율 (9/16 = 0.5625, 0.5625 * 100 = 56.25%) */
+    }
+
+    .people-container .person-card .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center; /* 이미지 중앙 정렬 추가 */
+    }
+
+    @media (min-width: 769px) {
         .people-container .person-card {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            align-items: start;
+            grid-template-columns: 200px 1fr;
         }
-
-        .people-container .person-card img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+        
+        .people-container .person-card .image-container {
+            width: 200px;
         }
+    }
 
-        .people-container .person-info {
-            padding-top: 0;
-            height: 100%; /* 부모 높이만큼 차지 */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* 컨텐츠를 위아래로 균등 분배 */
-        }
-
-        .people-container .person-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-
-        .people-container .person-info .degree {
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .people-container .person-info .tags {
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .people-container .person-info .tags span {
-            display: block;
-            color: #666;
-        }
-
-        .people-container .person-info p {
-            font-size: 0.8rem;
-            line-height: 1.4; /* 본문 텍스트의 줄간격을 더 넓게 */
-        }
-
+    @media (max-width: 768px) {
         .people-container .person-card .image-container {
             width: 100%;
-            position: relative;
-            padding-top: 177.78%; /* 9:16 비율 (9/16 = 0.5625, 0.5625 * 100 = 56.25%) */
         }
-
-        .people-container .person-card .image-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center; /* 이미지 중앙 정렬 추가 */
-        }
-
-        @media (min-width: 769px) {
-            .people-container .person-card {
-                grid-template-columns: 200px 1fr;
-            }
-            
-            .people-container .person-card .image-container {
-                width: 200px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .people-container .person-card .image-container {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
+    }
+</style>
 <body>
     <nav>
-        <img src="img/logo.png" alt="LitLab" class="logo">
+        <a href="/">
+            <img src="img/logo.png" alt="LitLab" class="logo">
+        </a>
         <div class="nav-links">
             <a href="/">LitLab</a>
             <a href="/people">People</a>
