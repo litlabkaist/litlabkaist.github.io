@@ -82,8 +82,9 @@ nav {
 }
 
 .nav-links a {
-    color: #11455C;
-    font-weight: 400;
+    /* color: #11455C; */
+    color: #000;
+    font-weight: 500;
     font-size: 1rem;
 }
 
@@ -126,12 +127,12 @@ nav {
 
 .address {
     font-size: 0.7rem;
-    color: #666;
+    color: #000;
     line-height: 1.5;
 }
 
 .copyright {
-    color: #666;
+    color: #000;
     font-size: 0.7rem;
 }
 
