@@ -155,9 +155,13 @@ nav {
 
 @media (max-width: 480px) {
     .footer-container {
+        max-width: 100%; /* max-width 재설정 */
+        margin: 0; /* margin 재설정 */
+        padding: 0 1rem;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 1rem;
+        align-items: flex-start; /* 왼쪽 정렬을 위해 추가 */
     }
     
     .address {
