@@ -12,39 +12,19 @@
     <title>Literary Studies at KAIST Lab</title>
 </head>
 <style>
-    .hero-content {
-        position: absolute;
-        top: 60%;
-        left: 10%;
-        transform: translateY(-50%);
-        max-width: 800px;
-        color: white;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem;
-        font-weight: normal;
-        margin-bottom: 0.5rem;
-    }
-
     .hero-text {
-        padding: 10rem 0 3rem 0;
+        padding: 10rem 1rem 3rem 1rem;
         background-color: white;
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         margin-bottom: 1rem;
         color: #000;
     }
 
     .hero-text h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: normal;
         margin-bottom: 0.5rem;
         color: #000;
@@ -59,72 +39,27 @@
     .hero-image {
         position: relative;
         width: 100%;
-        height: 40vh;
-        background-image: url('img/bg_test.webp');
+        height: 30vh;
+        background-image: url('img/bg.jpg');
         background-position: center;
         background-size: cover;
     }
 
-    @media (max-width: 768px) {
-        .hero-text {
-            padding: 10rem 1rem 2rem 1rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .hero-text {
-            padding: 5rem 1rem 2rem 1rem;
-        }
-
-        .hero-text h1 {
-            font-size: 1.5rem;
-        }
-
-        .hero-text h3 {
-            font-size: 1rem;
-            font-weight: normal;
-            margin-bottom: 0.3rem;
-        }
-        
-        .hero-content {
-            left: 5%;
-            max-width: 90%;
-        }
-
-        .hero-content h1 {
-            font-size: 1.5rem;
-        }
-
-        .hero-image {
-            height: 30vh;
-        }
-    }
-
     .welcome {
-        padding: 5rem 10%;
         background: white;
     }
 
     .welcome p {
-        font-size: 1.1rem;
+        padding: 0rem 1rem 0rem 1rem;
+        font-size: 1.3rem;
         line-height: 1.6;
         color: #000;
-        max-width: 768px;
+        max-width: 960px;
     }
 
     .welcome em {
         font-style: italic;
         color: #11455C;
-    }
-
-    @media (max-width: 768px) {
-        .welcome {
-            padding: 3rem 5%;
-        }
-    }
-
-    @media (max-width: 480px) {
-        
     }
 
     .news {
@@ -134,12 +69,14 @@
     }
 
     .news-title {
+        padding: 0rem 1rem 0rem 1rem;
         color: #000;
         font-size: 2rem;
         margin-bottom: 3rem;
     }
 
     .news-grid {
+        padding: 0rem 1rem 0rem 1rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
@@ -184,33 +121,11 @@
         text-align: center;
         color: #000;
         cursor: pointer;
-        margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-        .news-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 480px) {
-        .news-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .news-title {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .news-text {
-            font-size: 0.9rem;
-            line-height: 1.3;
-        }
+        margin-top: 3rem;
     }
 
     .home-container {
-        max-width: 768px;
+        max-width: 960px;
         margin: 0 auto;
         width: 100%;
     }
@@ -219,26 +134,26 @@
         padding: 3rem 0;
     }
 
-    @media (max-width: 768px) {
-        .welcome, .news {
-            padding: 3rem 1rem;
-        }
-    }
-
     .contact {
         color: #000;
         background: white;
         margin-bottom: 5rem;
     }
 
+    .contact strong {
+        color: #11455C;
+    }
+
     .contact-title {
+        padding: 0rem 1rem 0rem 1rem;
         color: #000;
         font-size: 2rem;
         margin-bottom: 3rem;
     }
 
     .contact-text {
-        font-size: 1.1rem;
+        padding: 0rem 1rem 0rem 1rem;
+        font-size: 1.3rem;
         line-height: 1.6;
         color: #000;
         margin-bottom: 2rem;
@@ -260,22 +175,112 @@
     }
 
     @media (max-width: 768px) {
+        .hero-text {
+            padding: 10rem 1rem 2rem 1rem;
+        }
+        
+        .welcome {
+            /* padding: 3rem 1rem; */
+        }
+
+        .news {
+            /* padding: 3rem 1rem; */
+        }
+
+        .news-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         .contact {
-            padding: 3rem 1rem;
+            /* padding: 3rem 1rem; */
         }
     }
 
     @media (max-width: 480px) {
+        .hero-text {
+            padding: 5rem 1rem 2rem 1rem;
+        }
+
+        .hero-text h1 {
+            font-size: 1.5rem;
+        }
+
+        .hero-text h3 {
+            font-size: 1.1rem;
+            line-height: 1.3;
+            font-weight: normal;
+            margin-bottom: 0.3rem;
+        }
+        
+        .hero-content {
+            left: 5%;
+            max-width: 90%;
+        }
+
+        .hero-content h1 {
+            font-size: 1.5rem;
+        }
+
+        .hero-image {
+            height: 30vh;
+        }
+
+        .welcome {
+            padding: 2rem 1rem;
+        }
+
+        .welcome p {
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .news-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .news-text {
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+
         .contact-title {
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .contact-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
             margin-bottom: 1.5rem;
         }
     }
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const newsGrid = document.getElementById("newsGrid");
+        const showMoreBtn = document.getElementById("showMoreBtn");
+        const newsItems = Array.from(newsGrid.getElementsByClassName("news-item"));
+        const initialVisible = 6; // 처음 보이는 개수
+
+        // 초기 상태: 6개만 표시
+        newsItems.forEach((item, index) => {
+            if (index >= initialVisible) {
+                item.style.display = "none";
+            }
+        });
+
+        showMoreBtn.addEventListener("click", function() {
+            newsItems.forEach(item => item.style.display = "flex"); // 모든 뉴스 보이기
+            showMoreBtn.style.display = "none"; // 버튼 숨기기
+        });
+    });
+</script>
 <body>
     <nav>
         <div class="nav-container">
@@ -294,7 +299,7 @@
     <section class="home-container">
         <section class="hero-text">
             <h1>Literary Studies at KAIST Lab</h1>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+            <h3>Where literature, culture, and technology converge to envision new horizons</h3>
         </section>
     </section>
 
@@ -305,62 +310,113 @@
 
     <section class="home-container">
         <section class="welcome">
-            <p><strong><em>Literary Studies at KAIST Lab</em></strong> is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.</p>
+            <p><strong><em>The KAIST Litlab (Literary Studies at KAIST Lab)</em></strong> reimagines literary studies for the digital age, exploring innovative intersections between literature, digital methods, and cultural analysis through our research. We approach digital technology both as a research methodology and as a cultural phenomenon that requires a humanistic critical inquiry. Our lab members come from various academic backgrounds, including literary studies, information science, and computer engineering. Through experimental and creative research projects, we examine how texts across historical periods and cultural boundaries shape and reflect cultural dynamics while deepening our understanding of today’s technological landscape and its implications. As a group of digital humanists in the School of Digital Humanities and Computational Social Sciences at KAIST, we collectively aim to understand the complexities of our current technology-driven world and the evolving role of literature in how we interpret it.</p>
         </section>
 
         <section class="news">
             <h3 class="news-title">News</h3>
-            <div class="news-grid">
+            <div class="news-grid" id="newsGrid">
                 <div class="news-item">
                     <div class="image-wrapper">
-                        <img src="img/news1.jpg" alt="news1">
+                        <img src="img/news/03733b05-f2bb-458c-a0be-34dc981a2e45.jpg" alt="news_image">
                     </div>
-                    <div class="news-date">Jan, 2025</div>
-                    <div class="news-text">Literary Studies at KAIST Lab is open now!</div>
+                    <div class="news-date">2025 February</div>
+                    <div class="news-text">Woori Jang Graduated with an MS</div>
                 </div>
                 
                 <div class="news-item">
                     <div class="image-wrapper">
-                        <img src="img/news2.png" alt="news1">
+                        <img src="img/news/8d3ec223-d37c-42ef-9b2b-ef8836a83bb3.jpg" alt="news_image">
                     </div>
-                    <div class="news-date">Jan, 2025</div>
-                    <div class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada justo a massa fringilla, ut cursus magna consectetur. </div>
+                    <div class="news-date">2025 January</div>
+                    <div class="news-text">Litlab page launched</div>
                 </div>
-
                 <div class="news-item">
                     <div class="image-wrapper">
-                        <img src="img/news2.png" alt="news1">
+                        <img src="img/news/ac74a950-950a-40a8-ae9f-c8ea430df04d.png" alt="news_image">
                     </div>
-                    <div class="news-date">Jan, 2025</div>
-                    <div class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur risus ut magna scelerisque, id convallis lectus dictum.</div>
+                    <div class="news-date">2025 January</div>
+                    <div class="news-text">Seohyon Jung presented her paper at MLA2025</div>
                 </div>
-
                 <div class="news-item">
                     <div class="image-wrapper">
-                        <img src="img/news2.png" alt="news1">
+                        <img src="img/news/basic.png" alt="news1">
                     </div>
-                    <div class="news-date">Jan, 2025</div>
-                    <div class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div class="news-date">2025 January</div>
+                    <div class="news-text">Jiwoo Choi presented her paper at </div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 December</div>
+                    <div class="news-text">Seohyon Jung presented her paper at ELLAK 2024</div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 December</div>
+                    <div class="news-text">Woori Jang successfully defended her M.S. thesis</div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 December</div>
+                    <div class="news-text">Woori Jang received Outstanding Graduate Research Award from College of Liberal Arts and Convergence Science</div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 November</div>
+                    <div class="news-text">Woori Jang Presented her work at the NLP4DH workshop (EMNLP 2024)</div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 September</div>
+                    <div class="news-text">Donghoon Jung Joined Litlab</div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 March</div>
+                    <div class="news-text">Jiwoo Choi and Eunhoo Lee Joined Litlab</div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 February</div>
+                    <div class="news-text">Woori Jang won Pony Chung Scholarship for Researchers in the Humanities</div>
+                </div>
+                <div class="news-item">
+                    <div class="image-wrapper">
+                        <img src="img/news/basic.png" alt="news1">
+                    </div>
+                    <div class="news-date">2024 March</div>
+                    <div class="news-text">Woori Jang Joined Litlab</div>
                 </div>
                 <!-- 나머지 뉴스 아이템들도 같은 구조로 추가 -->
             </div>
-            <!-- <div class="show-more">Show More</div> -->
+            <div class="show-more" id="showMoreBtn">Show More</div>
         </section>
 
         <section class="contact">
             <h3 class="contact-title">Contact</h3>
-            <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-            <div class="contact-emails">
-                <p class="contact-email"><strong>Lab Mail:</strong> litlab.kaist@gmail.com</p>
-            </div>
+            <p class="contact-text">If you wish to be a part of our lab, work with us on exciting research projects, or have any questions about our lab, please contact us at <strong>litlab.kaist@gmail.com</strong></p>
         </section>
     </section>
     <footer class="footer">
         <div class="footer-container">
             <div class="address">
-                <p>KAIST. N4, Room 1411,</p>
-                <p>291 Daehak-ro, Yuseong-gu, Daejeon (34141)</p>
-                <p>Republic of Korea</p>
+                <p>(34141) 291 Daehak-ro, KAIST N4, 1411</p>
+                <p>Yuseong-gu, Daejeon</p>
+                <p>South Korea</p>
             </div>
             <div class="copyright">
                 <p>© 2025. LitLab. All Rights Reserved.</p>
