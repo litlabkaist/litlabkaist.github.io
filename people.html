@@ -55,6 +55,16 @@
     .people-container .person-info h3 {
         font-size: 1.1rem;
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px; /* 이름과 아이콘 간격 */
+    }
+
+    .people-container .person-info h3 img.home-img {
+        width: 18px; /* 아이콘 크기 조정 */
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
     }
 
     .people-container .person-info .degree {
@@ -156,7 +166,8 @@
                 </div>
                 <div class="person-info">
                     <h3>Seohyon Jung
-                        <a href="https://ghss.kaist.ac.kr/boards/view/faculty_board/30" target="_blank">🏠</a>
+                        <a href="https://ghss.kaist.ac.kr/boards/view/faculty_board/30" target="_blank"><img src="img/home_img.png" class="home-img"></img></a>
+                        
                     </h3>
                     <p class="degree">Assistant Professor, School of Digital Humanities and Computational Social Sciences</p>
                     <p class="tags">
